@@ -3,6 +3,8 @@
   <head>
     <title>Monthly Prompt</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
 
@@ -13,21 +15,62 @@
       <fieldset>
         <legend>FAQ</legend>
         <h3>Who created this site?</h3>
-        <p>The Monthly Prompt competition was created by Eric Davidson, a software engineer that spends most of his time working on a myriad of side projects. You can contact Eric by email at thebuffed@gmail.com.
+        <p>The <span class="color-text">Monthly Prompt</span> competition was created by <span class="color-text">Eric Davidson</span>, a software engineer that spends most of his time working on a myriad of side projects. You can contact Eric by email at <span class="color-text">thebuffed@gmail.com</span>.
         <h3>How do I know that my donation is being used appropriately?</h3>
-        <p>Great question and one I want to be extremely transparent about. Each month I will do my best to share any analytics I can from PayPal regarding the number of donations for that month. I want it to be clear that your donations are supporting the site and going towards the monthly cash prize.</p>
+        <p>Great question and one I want to be <span class="color-text">extremely transparent</span> about. Each month I will do my best to share any analytics from PayPal regarding the <span class="color-text">number of donations</span> for that month. I want it to be clear that your donations are supporting the site and going towards the monthly cash prize.</p>
         <h3>How are the stories judged?</h3>
-        <p>Right now I will be evaluating all of the submissions on my own. The hope is that the number of entries will surpass my ability to receive them by myself and I will be able to enlist help.</p>
-        <p>Eventually I would like to involve the community with some kind of voting system. For example, I may choose between five and ten entries for a particular month and then readers would vote on their favorites. This method will provide more exposure and incentive for participation. Things are simple right now at the beginning but with your help they will become much more exciting quickly!</p>
+        <p>Right now I will be evaluating all of the submissions on my own. The hope is that the number of entries will <span class="color-text">surpass my ability</span> to receive them by myself and I will be able to enlist help.</p>
+        <p>Eventually I would like to <span class="color-text">involve the community</span> with some kind of voting system. For example, I may choose between five and ten entries for a particular month and then readers would vote on their favorites. This method will <span class="color-text">provide more exposure</span> and incentive for participation. Things are simple right now at the beginning but with your help they will become much more exciting quickly!</p>
         <h3>Do I retain the rights to my stories?</h3>
-        <p>Of course! I will never use the stories submitted to monthylprompt@gmail.com for any reason other than to promote the site and the author that submitted the story.</p>
+        <p>Of course! I will never use the stories submitted to <span class="color-text">monthlyprompt@gmail.com</span> for any reason other than to promote the site and the author that submitted the story.</p>
         <h3>What should I include in my submission?</h3>
-        <p>For the subject of your email, please identify the month that you're submitting for as well as the title of your submission. In addition to your story, please include any information or links that you would like included should your story be chosen and displayed on the site.</p>
+        <p>For the subject of your email, please identify the month that you're submitting for as well as the <span class="color-text">title of your submission</span>. In addition to your story, please include any information or links that you would like included should your story be chosen and displayed on the site.</p>
         <h3>Why is the website so simple and boring?</h3>
-        <p>Right now I am trying to find out how much interest people have in this concept. Given enough time, participants, and donations the site and competition will evolve accordingly.</p>
+        <p>Right now I am trying to find out how much <span class="color-text">interest people have</span> in this concept. Given enough time, participants, and donations the site and competition will evolve accordingly.</p>
         <h3>Can I become a sponsor?</h3>
-        <p>That would be amazing! Send me an email at thebuffed@gmail.com so that we can discuss further.</p>
+        <p>Yes, and that <span class="color-text">would be amazing</span>! Send me an email at <span class="color-text">thebuffed@gmail.com</span> so that we can discuss further.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Terms of Service</legend>
+        <p>By visiting this site or participating in the competition you are agreeing to be bound by the following terms of service. If you do not agree, then you are prohibited from accessing this site.</p>
+        <p>The owners of this competition do not automatically support or endorse the views represented in a story simply because they may appear on the site.</p>
+        <p>By submitting to this competition you retain the rights to your entry, but you also accept the possibility that other readers may distribute and even alter your work. Furthermore, please keep in mind that if you include your contact information to be displayed alongside a winning submission, the owner and administrators of this site cannot be held responsible for any communication sent to you by others or damages implied. You are always welcome to submit anonymously, in which case only your writing will be displayed on the site.</p>
+        <p>At no time will this competition or it's owners be required to provide refunds for donations.</p>
+        <p>Any links that lead to another site or application do not automatically imply endorsement by this competition or its owners.</p>
+        <p>The owner of this competition reserves the right to alter these terms of service at any time. By using the site you are agreeing to be held accountable to the current version of these terms.</p>
       </fieldset>
     </div>
+
+    <script>
+
+        function dark_mode() {
+          document.body.style.backgroundColor = '#303030';
+          document.body.style.color = "#ffffff"
+        }
+
+        var myArray = ['#d47564', '#CAA67A', '#4fa4a5'];
+
+        var elements = document.getElementsByClassName("color-text");
+        var c = ''
+        var last_c = ''
+        for(var i=0; i<elements.length; i++) {
+            c = myArray[Math.floor(Math.random() * myArray.length)];
+            while (c == last_c) {
+              c = myArray[Math.floor(Math.random() * myArray.length)];
+            }
+            elements[i].style.color = c;
+        }
+
+        var links = document.getElementsByTagName("a");
+        for(var i=0;i<links.length;i++)
+        {
+            if(links[i].href)
+            {
+                links[i].style.color = myArray[Math.floor(Math.random() * myArray.length)];
+            }
+        }
+
+    </script>
   </body>
 </html>
