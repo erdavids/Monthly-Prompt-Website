@@ -141,6 +141,17 @@ a:visited { text-decoration: none; color: black;}
   margin-right: auto;
 }
 
+fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 2px solid (internal value);
+}
+
 /*-- Trying to make a custom grid system -- */
 /* Create two equal columns that floats next to each other */
 
@@ -222,4 +233,3 @@ a:visited { text-decoration: none; color: black;}
     clear: both;
     display: table;
 }
-
