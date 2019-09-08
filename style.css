@@ -149,7 +149,7 @@ fieldset {
   padding-bottom: 0.625em;
   padding-left: 0.75em;
   padding-right: 0.75em;
-  border: 2px solid (internal value);
+  border: 2px solid;
 }
 
 /*-- Trying to make a custom grid system -- */
